@@ -1,32 +1,36 @@
 import Image from 'next/image'
+import PropTypes from 'prop-types'
+import { withTranslation } from '../i18n'
 
-export default function Nav() {
+const Nav = ({ t }) => {
+
   const navItems = [
     {
-      label: 'home',
+      label: t('home'),
       path: '/',
     },
     {
-      label: 'lifestyle',
+      label: t('lifestyle'),
       path: '/lifestyle',
     },
     {
-      label: 'fashion',
+      label: t('fashion'),
       path: '/fashion',
     },
     {
-      label: 'music',
+      label: t('music'),
       path: '/music',
     },
     {
-      label: 'product',
+      label: t('product'),
       path: '/product',
     },
     {
-      label: 'contact',
+      label: t('contact'),
       path: '/contact',
     },
   ];
+
 
   return (
     <nav className="font-sans flex flex-col text-center content-center sm:flex-row sm:text-left sm:justify-between py-2 px-6 bg-white sm:items-baseline w-full">
@@ -52,3 +56,13 @@ export default function Nav() {
     </nav>
   )
 }
+
+Nav.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+
+Nav.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
+export default withTranslation('common')(Nav)

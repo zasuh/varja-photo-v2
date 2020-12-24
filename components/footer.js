@@ -1,19 +1,23 @@
-export default function Footer() {
-  const languages = [
-    {
-      value: 'en',
-      label: 'ENG',
-    },
-    {
-      value: 'sl',
-      label: 'SLO',
-    },
-    {
-      value: 'es',
-      label: 'ESP',
-    },
-  ];
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { i18n } from '../i18n'
 
+const languages = [
+  {
+    value: 'en',
+    label: 'ENG',
+  },
+  {
+    value: 'sl',
+    label: 'SLO',
+  },
+  {
+    value: 'es',
+    label: 'ESP',
+  },
+];
+
+export default function Footer() {
   return (
     <div className="container p-8">
       <div className="flex sm:flex">
