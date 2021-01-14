@@ -32,8 +32,8 @@ const Nav = ({ t }) => {
   ];
 
   return (
-    <nav className="font-sans flex flex-col text-center content-center sm:flex-row sm:text-left sm:justify-between py-2 px-6 bg-white sm:items-baseline w-full">
-      <div className="mb-2 sm:mb-0 flex flex-row">
+    <nav className="font-sans flex flex-col text-center content-center sm:flex-row sm:flex-wrap sm:text-left sm:justify-between py-2 px-6 bg-white sm:items-baseline w-full">
+      <div className="mb-2 sm:mb-0 flex flex-row justify-center">
         <Link href="/">
           <Image
             cloudName="zanedev"
@@ -47,7 +47,7 @@ const Nav = ({ t }) => {
       <div className="sm:mb-0 self-center">
         {navItems.map((item) => (
           <Link href={item.path} key={item.path}>
-            <span className="hover:text-teal-600 text-md text-black hover:text-blue-dark ml-2 px-1 cursor-pointer">
+            <span className="hover:text-purple-700 text-md text-black hover:text-blue-dark ml-2 px-1 cursor-pointer">
               {item.label}
             </span>
           </Link>
