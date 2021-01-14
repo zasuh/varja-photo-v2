@@ -13,7 +13,7 @@ const options = {
   },
 };
 
-export default function Product() {
+export default function Music() {
   return (
     <Layout>
       <SRLWrapper options={options}>

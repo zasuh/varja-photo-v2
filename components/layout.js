@@ -2,6 +2,7 @@ import Head from "next/head";
 import Footer from "./footer";
 import Nav from "./nav";
 
+// eslint-disable-next-line react/prop-types
 export default function Layout({ children }) {
   return (
     <div className="container mx-auto px-16 min-h-screen flex flex-col font-sans">
@@ -10,7 +11,9 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main className="flex px-8">{children}</main>
+      <main className="flex flex-grow text-center content-center py-2 px-6 w-full">
+        {children}
+      </main>
       <Footer />
     </div>
   );
