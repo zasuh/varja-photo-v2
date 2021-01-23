@@ -1,47 +1,47 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { i18n } from '../i18n'
+import { i18n } from "../i18n";
 
 const languages = [
   {
-    value: 'en',
-    label: 'ENG',
+    value: "en",
+    label: "ENG",
   },
   {
-    value: 'sl',
-    label: 'SLO',
+    value: "sl",
+    label: "SLO",
   },
   {
-    value: 'es',
-    label: 'ESP',
+    value: "es",
+    label: "ESP",
   },
 ];
 
 export default function Footer() {
   return (
-    <div className="container p-8">
-      <div className="flex sm:flex">
-        <div className="flex sm:w-1/3 sm:mt-0 xs:w-1 h-auto justify-start">
+    <div className="container py-8 px-6">
+      <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
+        <div className="grid justify-center md:justify-start">
           <div>© 2020 VARJA JOVANOVIC</div>
         </div>
-        <div className="flex sm:w-1/3 sm:mt-0 xs:w-1 h-auto justify-center">
+        <div className="flex flex-row justify-center sm:justify-center">
           {languages.map((language) => (
-            <div
+            <span
               key={language.label}
               onClick={() => {
-                localStorage.setItem('i18nextLng', language.value);
+                localStorage.setItem("i18nextLng", language.value);
                 i18n.changeLanguage(language.value);
               }}
-              className="mr-3 underline hover:text-teal-600 cursor-pointer"
+              className="mr-3 underline hover:text-purple-700 cursor-pointer"
             >
               {language.label}
-            </div>
+            </span>
           ))}
         </div>
-        <div className="flex sm:w-1/3 sm:mt-0 xs:w-1 h-auto justify-end">
+        <div className="grid justify-center md:justify-end">
           <div>EMAIL | INSTAGRAM</div>
         </div>
       </div>
     </div>
-  )
+  );
 }
