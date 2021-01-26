@@ -11,7 +11,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <main className="flex flex-grow text-center content-center py-2 px-6 w-full">
+      <main className="flex flex-grow text-center content-center py-2 px-4 w-full">
         {children}
       </main>
       <Footer />

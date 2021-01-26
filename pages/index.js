@@ -21,7 +21,7 @@ export default function Home() {
           {images.map((img) => (
             <Image
               key={img}
-              width="440"
+              width="450"
               cloudName="zanedev"
               publicId={`home/${img}`}
             />

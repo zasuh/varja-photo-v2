@@ -18,6 +18,9 @@ const languages = [
 ];
 
 export default function Footer() {
+  // eslint-disable-next-line react/prop-types
+  const Mailto = ({ email, children }) => <a className="hover:text-purple-700" href={`mailto:${email}`}>{children}</a>;
+
   return (
     <div className="font-inria-sans container py-8 px-6">
       <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
@@ -40,7 +43,9 @@ export default function Footer() {
         </div>
         <div className="grid justify-center md:justify-end">
           <div>
-            EMAIL
+            <Mailto email="varja.photo@gmail.com">
+              EMAIL
+            </Mailto>
             {' '}
             |
             {' '}
